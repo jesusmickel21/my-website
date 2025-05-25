@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -19,45 +20,48 @@
 
     .card {
       background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 20px;
+      padding: 15px 20px;
+      border-radius: 15px;
       text-align: center;
-      box-shadow: 0 0 20px #000;
-      max-width: 400px;
+      box-shadow: 0 0 15px #000;
+      width: 300px;
     }
 
     .avatar {
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #f2c200;
-      margin-bottom: 20px;
+      border: 3px solid #f2c200;
+      margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 16px;
+      margin-bottom: 5px;
       color: #f2c200;
     }
 
     .typewriter {
-      font-size: 15px;
-      line-height: 1.8;
+      font-size: 12px;
+      line-height: 1.5;
       direction: rtl;
-      min-height: 150px;
+      white-space: pre-line;
+      min-height: 120px;
+      margin-bottom: 5px;
     }
 
     .btn {
       background-color: #0077ff;
       color: white;
-      padding: 10px 20px;
+      padding: 6px 12px;
       text-decoration: none;
-      border-radius: 10px;
+      border-radius: 8px;
       font-weight: bold;
       transition: background 0.3s;
       display: inline-block;
-      margin-top: 10px;
+      margin: 4px 0;
+      font-size: 13px;
     }
 
     .btn:hover {
@@ -81,10 +85,11 @@
 ❖ أُتقن فن إنشاء البوتات الذكية بخبرة وأناقة.
 ❖ أنسج الأكواد كما يُنسج الشعر، وأبني الأنظمة كما تُبنى القصور.
 ❖ في عالمي، كل أمر يُرسل يصبح استجابة فاخرة.
+
 ✦ Instagram : @f6___w8`;
 
     let i = 0;
-    const speed = 50; // سرعة الكتابة (كل كم ميلي ثانية)
+    const speed = 40;
 
     function typeWriter() {
       if (i < text.length) {
