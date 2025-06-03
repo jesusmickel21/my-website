@@ -1,16 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>『 αʅαα ძᥱ᥎ 』</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       background: linear-gradient(to bottom right, #002244, #f2c200);
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Cairo', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,7 +24,8 @@
       border-radius: 15px;
       text-align: center;
       box-shadow: 0 0 15px #000;
-      width: 300px;
+      width: 90%;
+      max-width: 300px;
     }
 
     .avatar {
@@ -34,6 +35,7 @@
       object-fit: cover;
       border: 3px solid #f2c200;
       margin-bottom: 10px;
+      transition: opacity 0.5s ease;
     }
 
     h1 {
@@ -62,6 +64,7 @@
       display: inline-block;
       margin: 4px 0;
       font-size: 13px;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -71,7 +74,7 @@
 </head>
 <body>
   <div class="card">
-    <img src="avatar.jpg" alt="avatar" class="avatar" />
+    <img id="avatar" src="avatar1.jpg" alt="avatar" class="avatar" />
     <h1>🇵🇸 ꙰:『 αʅαα ძᥱ᥎ 』 🇩🇿 ꙰</h1>
 
     <p class="typewriter" id="typewriter"></p>
@@ -81,6 +84,7 @@
   </div>
 
   <script>
+    // تأثير الكتابة
     const text = `『 صـانِـع الأوهــام التِقـنِـيـة 』
 ❖ أُتقن فن إنشاء البوتات الذكية بخبرة وأناقة.
 ❖ أنسج الأكواد كما يُنسج الشعر، وأبني الأنظمة كما تُبنى القصور.
@@ -100,6 +104,20 @@
     }
 
     typeWriter();
+
+    // تبديل الصور تلقائيًا
+    const avatar = document.getElementById("avatar");
+    const images = ["avatar1.jpg", "avatar2.jpg"]; // تأكد أن الصور موجودة بنفس المسار
+    let currentIndex = 0;
+
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      avatar.style.opacity = 0;
+      setTimeout(() => {
+        avatar.src = images[currentIndex];
+        avatar.style.opacity = 1;
+      }, 500);
+    }, 2000); // التبديل بعد ثانيتين فقط
   </script>
 </body>
 </html>
