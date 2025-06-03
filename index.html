@@ -105,19 +105,19 @@
 
     typeWriter();
 
-    // تبديل الصور تلقائيًا
+    // تبديل الصور كل ثانيتين
     const avatar = document.getElementById("avatar");
-    const images = ["avatar1.jpg", "avatar2.jpg"]; // تأكد أن الصور موجودة بنفس المسار
+    const images = ["avatar1.jpg", "avatar2.jpg"];
     let currentIndex = 0;
 
-    setTimeout(() => {
+    setInterval(() => {
       currentIndex = (currentIndex + 1) % images.length;
       avatar.style.opacity = 0;
       setTimeout(() => {
         avatar.src = images[currentIndex];
         avatar.style.opacity = 1;
       }, 500);
-    }, 2000); // التبديل بعد ثانيتين فقط
+    }, 2000);
   </script>
 </body>
 </html>
